@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버튼만들기</title>
+    <script>
+      function aa() {
+        let value1 = document.getElementById("aaa").value;
+        alert(value1 + "ㅇㅇ");
+      }
+    </script>
+  </head>
+  <body>
+    <h3>버튼만들기</h3>
+    <hr />
+    <form action="">
+      search : <input type="text" size="10" id="aaa" />
+      <input type="button" value="question1" onclick="aa()" />
+      <button type="button">question2</button><br />
+      submit : <input type="submit" value="전송1" />
+      <button type="submit">전송2</button><br />
+      reset : <input type="reset" value="다시쓰기1" /><button type="reset">
+        다시쓰기2</button
+      ><br />
+      image : <input type="image" src="img/1.jpg" width="50" height="50" />
+      <button type="button">
+        <img src="img/b.jpg" width="50" height="50" alt="" />
+      </button>
+      <br />
+    </form>
+  </body>
+</html>

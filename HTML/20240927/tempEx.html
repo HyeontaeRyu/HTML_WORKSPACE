@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>온도</title>
+    <style></style>
+    <script>
+      function temperature() {
+        let temperature = document.getElementsByClassName("temperature").value;
+        document.getElementById("temperatureDiv").innerText = temperature;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>홈 제어 시스템 온도 조절</h3>
+    <hr />
+    <form action="">
+      지속 시간 : (0.0 ~ 10.0 시간)
+      <input
+        type="number"
+        name=""
+        step="0.5"
+        min="0.0"
+        max="10.0"
+        id=""
+      /><br />
+      온도 조절 :
+      <span id="temperatureDiv">00</span>
+      &deg;
+      <input
+        type="range"
+        min="10"
+        max="30"
+        step="1"
+        value="0"
+        list="temperature"
+        class="temperature"
+        name=""
+        oninput="document.getElementById('temperatureDiv').innerHTML=this.value"
+      />
+      <datalist id="temperature">
+        <option value="10" label="low"></option>
+        <option value="20" label="mid"></option>
+        <option value="30" label="max"></option>
+      </datalist>
+    </form>
+  </body>
+</html>
