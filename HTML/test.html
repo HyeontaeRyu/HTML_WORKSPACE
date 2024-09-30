@@ -3,12 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>Test</title>
+    <script src="../JS/passgen.js"></script>
     <script>
-      generatePassword(12);
+      function updatePassword() {
+        try {
+          var length = document.getElementById("inputlength").value;
+          if (isNaN(length) || length <= 0) {
+            throw new Error("Please enter a valid positive number.");
+          }
+          document.getElementById("passwordHere").innerHTML = generatePassword(length);
+        } catch (error) {
+          alert(error.message);
+        }
+      }
     </script>
+
   </head>
   <body>
-    <button type="button" onclick="">생성</button>
-    <span></span>
+    <form action="">
+      <input type="number" min="1" max="30" step="1"  id="inputlength" placeholder="Enter length" value="">
+      <button type="button" onclick="updatePassword()">생성</button>
+      <br>
+      <span id="passwordHere">passwordhere</span>
+    </form>
   </body>
 </html>

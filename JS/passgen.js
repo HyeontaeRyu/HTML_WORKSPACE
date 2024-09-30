@@ -4,9 +4,9 @@ function getRandomCharactor() {
     return charactors[randomIndex];    
 }
 
-function generatePassword(passwordLength) {
+function generatePassword(length) {
     var password = '';
-    var passwordLength = passwordLength;
+    var passwordLength = length;
     for (var i = 0; i < passwordLength; i++) {
         password += getRandomCharactor();
     }
