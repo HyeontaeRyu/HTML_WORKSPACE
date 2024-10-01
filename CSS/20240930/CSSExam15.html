@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>박스에 그림자 효과</title>
+    <style>
+      div {
+        width: 150px;
+        height: 70px;
+        padding: 10px;
+        border: 10px solid lightgray;
+        background-image: url("/IMG/spongebob.png");
+        /* background-size: 150px, 100px; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+      }
+      .redbox {
+        box-shadow: 10px 10px red;
+      }
+      .blurbox {
+        box-shadow: 10px 10px 5px skyblue;
+      }
+      .multibox {
+        box-shadow: 2px 2px 2px black, 0 0 20px blue, 0 0 5px darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>박스 그림자</h3>
+    <hr />
+    <div class="redbox"></div>
+    <div class="blurbox"></div>
+    <div class="multibox"></div>
+  </body>
+</html>
