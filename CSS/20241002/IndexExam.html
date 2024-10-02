@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>zIndex</title>
+    <style>
+      div,
+      img {
+        position: absolute;
+      }
+      #sA {
+        z-index: -3;
+        left: 10px;
+        top: 20px;
+      }
+      #s2 {
+        z-index: 2;
+        left: 40px;
+        top: 30px;
+      }
+      #s3 {
+        z-index: 3;
+        left: 80px;
+        top: 40px;
+      }
+      #s7 {
+        z-index: 7;
+        left: 120px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>z-index</h3>
+    <hr />
+    <div class="">
+      <img id="sA" src="/IMG/spade-A.png" width="75" height="130" alt="" />
+      <img id="s2" src="/IMG/spade-2.png" width="75" height="130" alt="" />
+      <img id="s3" src="/IMG/spade-3.png" width="75" height="130" alt="" />
+      <img id="s7" src="/IMG/spade-7.png" width="75" height="130" alt="" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      label {
+        display: block;
+        padding: 5px;
+      }
+      label span {
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+        padding: 10px;
+      }
+      input[type="text"] {
+        color: red;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus {
+        font-size: 120%;
+      }
+      input:hover,
+      textarea:hover {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="">
+        <span>Name</span><input type="text" name="" id="" />
+      </label>
+      <label for="">
+        <span>Email</span>
+        <input type="email" name="" placeholder="hong@test.com" id="" />
+      </label>
+      <label for="">
+        <span>Comment</span>
+        <textarea name="" placeholder="memo" id=""></textarea>
+      </label>
+      <label for="">
+        <span></span><input type="submit" value="전송" name="" id="" />
+      </label>
+    </form>
+  </body>
+</html>
