@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>멀티 전환</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      div {
+        display: inline-block;
+        padding: 5px;
+        color: white;
+        background-color: olivedrab;
+      }
+      #rotate {
+        transition: transform 1s;
+      }
+      #skew {
+        transition: transform 1s;
+      }
+      #translate {
+        transition: transform 1s;
+      }
+      #scale {
+        transition: transform 1s;
+      }
+      #rotate:hover {
+        transform: rotate(20deg);
+      }
+      #skew:hover {
+        transform: skew(0, -20deg);
+      }
+      #translate:hover {
+        transform: translateY(100px);
+      }
+      #scale:hover {
+        transform: scale(3, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Multi Transform</h3>
+    <hr />
+    회전(rotate), 기울임(skew), 이동(translate), 확대/축소(scale). hover기능을
+    추가하여 변화를 줌. <br />
+    <div id="rotate">rotate(20&deg;)</div>
+    <div id="skew">skew(0, -20&deg;)</div>
+    <div id="translate">translateY(100px)</div>
+    <div id="scale">scale(3,1)</div>
+  </body>
+</html>
