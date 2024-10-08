@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>animation</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      /* img {
+        animation: spin 1s infinite;
+        width: 150px;
+        height: 150px;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      } */
+      img {
+        animation: spin 1s infinite;
+        width: 150px;
+        height: 150px;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(90deg);
+        }
+        50% {
+          transform: rotate(-90deg);
+        }
+        100% {
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>어지러워요</h3>
+    <hr />
+    <img src="img/spongebob.png" alt="" />
+  </body>
+</html>
