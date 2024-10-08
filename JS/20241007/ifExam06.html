@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      function seq() {
+        var sumEven = 0;
+        var sumOdd = 0;
+        var sum = 0;
+        var num = 0;
+        num = prompt("숫자를 입력하세요");
+        if (isNaN(num)) {
+          alert("숫자를 입력하세요.");
+          return seq();
+        } else if (num <= 0) {
+          alert("0보다 큰 숫자를 입력하세요.");
+          return seq();
+        } else if (num % 1 != 0) {
+          alert("정수를 입력하세요.");
+          return seq();
+        }
+
+        for (let i = 0; i < num; i++) {
+          if (i % 2 == 0) {
+            sumEven += i;
+          } else {
+            sumOdd += i;
+          }
+          sum += i;
+        }
+
+        document.write(
+          "<h1>1~100까지의 짝수 합: " +
+            sumEven +
+            "</br>" +
+            "1~100까지의 홀수 합: " +
+            sumOdd +
+            "</br>" +
+            "1~100까지의 합: " +
+            sum +
+            "</h1>"
+        );
+      }
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      seq();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      function graded() {
+        var point = prompt("당신의 점수를 입력하세요.(70점 이상 80점 이하.)");
+        if (point >= 70 && point <= 80) {
+          if (point >= 77) {
+            document.write("<h1>당신의 학점은 C+입니다.</h1>");
+          } else if (point <= 74) {
+            document.write("<h1>당신의 학점은 C-입니다.</h1>");
+          } else {
+            document.write("<h1>당신의 학점은 C입니다.</h1>");
+          }
+        } else {
+          alert("70점 이상 80점 이하의 점수를 입력하세요.");
+          return graded();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      graded();
+    </script>
+  </body>
+</html>
