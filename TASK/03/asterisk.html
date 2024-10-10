@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      function ast(num) {
+        for (let i = 1; i <= num; i++) {
+          for (let k = 1; k <= num - i; k++) {
+            document.write("&nbsp;");
+          }
+          for (let j = 1; j <= i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+        for (let i = 1; i < num; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write("&nbsp;");
+          }
+          for (let k = 1; k <= num - i; k++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+      function ast2(num) {
+        for (let i = 1; i <= num; i++) {
+          if (i != num) {
+            for (let k = 1; k <= num - (num - i); k++) {
+              document.write("&nbsp;");
+            }
+            for (let j = 1; j <= num - i; j++) {
+              document.write("*");
+            }
+            document.write("<br>");
+          }
+        }
+        for (let i = 1; i < num; i++) {
+          for (let j = 1; j <= num - i - 1; j++) {
+            document.write("&nbsp;");
+          }
+          for (let k = 1; k <= num - (num - i - 1); k++) {
+            document.write("*");
+          }
+
+          document.write("<br>");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      ast(14);
+      ast2(14);
+    </script>
+  </body>
+</html>

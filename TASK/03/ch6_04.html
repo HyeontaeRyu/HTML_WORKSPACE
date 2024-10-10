@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      function date(whatdate) {
+        let date = whatdate;
+        switch (date) {
+          case "월":
+            document.write("<h1>월요일은 출근.</h1>");
+            break;
+          case "화":
+            document.write("<h1>화요일은 출근.</h1>");
+            break;
+          case "수":
+            document.write("<h1>수요일은 출근.</h1>");
+            break;
+          case "목":
+            document.write("<h1>목요일은 출근.</h1>");
+            break;
+          case "금":
+            document.write("<h1>금요일은 휴일.</h1>");
+            break;
+          case "토":
+            document.write("<h1>토요일은 휴일.</h1>");
+            break;
+          case "일":
+            document.write("<h1>일요일은 휴일.</h1>");
+            break;
+
+          default:
+            alert("올바른 값을 입력하세요.");
+            return date(prompt("월화수목금토일 중 하나를 입력하세요."));
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>월화수목금토일</h3>
+    <hr />
+    <script>
+      date(prompt("월화수목금토일 중 하나를 입력하세요."));
+    </script>
+  </body>
+</html>

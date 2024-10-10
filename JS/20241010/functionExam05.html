@@ -8,11 +8,20 @@
         font-family: sans-serif;
       }
     </style>
-    <script src="./js/nSquaretable.js"></script>
+    <script>
+      function sum(x, y) {
+        var z = x + y;
+        return z;
+      }
+      function prt(x, y) {
+        var results = sum(x, y);
+        document.write(results);
+      }
+    </script>
   </head>
   <body>
     <script>
-      nSquaretable(prompt("정수를 입력하세요."));
+      prt(10, 20);
     </script>
   </body>
 </html>

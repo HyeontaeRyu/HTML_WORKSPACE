@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      function f(x, y) {
+        var z = x + y;
+        return z;
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write(
+        "<h1>두 정수의 합은 " +
+          f(
+            Number(prompt("첫 번째 정수를 입력하세요.")),
+            Number(prompt("두 번째 정수를 입력하세요."))
+          ) +
+          "입니다.</h1>"
+      );
+    </script>
+  </body>
+</html>
