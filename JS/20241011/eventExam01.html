@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      function sum(x, y) {
+        let z = x + y;
+        return z;
+      }
+      function printresult() {
+        let result = sum(10, 5);
+        return (document.getElementById("result").textContent = result);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>10 + 5 = <span id="result"></span></h1>
+    <input type="button" value="result" onclick="printresult()" />
+  </body>
+</html>

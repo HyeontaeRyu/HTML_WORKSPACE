@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      let url = "https://www.itpaper.co.kr/index.jsp";
+      document.write("<h1>" + url + "</h1>");
+
+      document.write(url.length + "<br>");
+      document.write(url.charAt(1) + "<br>");
+
+      let position1 = url.indexOf("/");
+      document.write(position1 + "<br>");
+      let position2 = url.indexOf("/", position1 + 1);
+      document.write(position2 + "<br>");
+      let position3 = url.lastIndexOf("/");
+      document.write(position3 + "<br>");
+
+      let substring1 = url.substring(0, 8);
+      document.write(substring1 + "<br>");
+
+      let up = url.toUpperCase();
+      document.write(up + "<br>");
+      let low = up.toLowerCase();
+      document.write(low + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

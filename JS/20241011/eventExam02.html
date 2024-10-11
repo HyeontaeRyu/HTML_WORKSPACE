@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        display: inline-block;
+      }
+    </style>
+    <script>
+      function sum(x, y) {
+        let z = x + y;
+        return z;
+      }
+      function printresult() {
+        let result = sum(10, 50);
+        return (document.getElementById("a").innerHTML =
+          "<font color=red>" + result + "</font>");
+      }
+      function mouseout() {
+        return (document.getElementById("a").innerHTML = "?");
+      }
+    </script>
+  </head>
+  <body>
+    <h1 onmouseover="printresult()" onmouseout="mouseout()">
+      10 + 50 = <span id="a">?</span>
+    </h1>
+    <p>결과를 보시려면 수식 위에 마우스를 올리세요.</p>
+  </body>
+</html>

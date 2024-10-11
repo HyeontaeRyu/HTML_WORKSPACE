@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      let people = {};
+
+      people.name = "홍길동";
+      people.age = 32;
+      people.sayname = function () {
+        document.write("제 이름은 " + this.name + "입니다.<br>");
+      };
+      people.getInfo = function () {
+        document.write("이름: " + this.name + "<br>");
+        document.write("나이: " + this.age + "<br>");
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

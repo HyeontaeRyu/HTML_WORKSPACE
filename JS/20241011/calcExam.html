@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+    <script>
+      var calc = {};
+      calc.x = 0;
+      calc.y = 0;
+
+      calc.setValue = function (x, y) {
+        this.x = x;
+        this.y = y;
+      };
+
+      calc.sum = function () {
+        return this.x + this.y;
+      };
+
+      calc.sub = function () {
+        return this.x - this.y;
+      };
+
+      calc.printsub = function () {
+        document.write("sub = " + this.sub());
+      };
+
+      calc.printsum = function () {
+        document.write("sum = " + this.sum());
+      };
+    </script>
+  </head>
+  <body>
+    <script>
+      calc.setValue(10, 20);
+      calc.printsum();
+    </script>
+  </body>
+</html>
