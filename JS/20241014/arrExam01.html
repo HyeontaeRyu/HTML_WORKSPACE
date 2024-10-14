@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      let myarr = new Array("apple", "banana", "grape", "orange", "strawberry");
+      //   let myarr = ["apple", "banana", "grape", "orange", "strawberry"];
+      document.write("<h1>" + myarr[1] + "</h1>");
+
+      myarr[1] = "kiwi";
+      document.write("<h1>" + myarr[1] + "</h1>");
+
+      for (let i = 0; i < myarr.length; i++) {
+        document.write("<h1>" + myarr[i] + "</h1>");
+      }
+      for (let i = 0; i < myarr.length; i++) {
+        myarr[i] = "melon";
+        document.write("<h1>" + myarr[i] + "</h1>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

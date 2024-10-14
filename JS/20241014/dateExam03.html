@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      let day1 = new Date(2024, 0, 1);
+      let today = new Date();
+
+      document.write(today + "<br>");
+
+      let cnt = today.getTime() - day1.getTime();
+
+      document.write(cnt + "<br>");
+      let day = Math.floor(cnt / (24 * 60 * 60 * 1000));
+      document.write(day + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      function getDday(n1, n2, n3) {
+        let nextyear = new Date(n1, n2 - 1, n3 + 1);
+        let today = new Date();
+
+        let cnt = nextyear.getTime() - today.getTime();
+        let day = Math.floor(cnt / (24 * 60 * 60 * 1000));
+        return day;
+      }
+
+      document.write(getDday(2025, 3, 16) + "일 남았습니다.");
+    </script>
+  </head>
+  <body></body>
+</html>

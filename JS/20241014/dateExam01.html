@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      let days = ["일", "월", "화", "수", "목", "금", "토"];
+      let myDate = new Date();
+
+      document.write(myDate + "<br>");
+
+      let yyyy = myDate.getFullYear();
+      let m = myDate.getMonth() + 1;
+      let dd = myDate.getDate();
+      let day = myDate.getDay();
+
+      document.write(yyyy + "<br>");
+      document.write(m + "<br>");
+      document.write(dd + "<br>");
+      document.write(day + "<br>");
+
+      let hr = myDate.getHours();
+      let mi = myDate.getMinutes();
+      let ss = myDate.getSeconds();
+
+      document.write("<h1>" + hr + "시 " + mi + "분 " + ss + "초" + "</h1>");
+    </script>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

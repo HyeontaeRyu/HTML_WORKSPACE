@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolar, sans-serif;
+      }
+    </style>
+    <script>
+      let days = ["일", "월", "화", "수", "목", "금", "토"];
+      let myDate = new Date();
+      //2024년 9월 20일
+      myDate.setFullYear(2024);
+      myDate.setMonth(8);
+      myDate.setDate(20);
+      myDate.setHours(9);
+      myDate.setMinutes(30);
+      myDate.setSeconds(0);
+
+      document.write(myDate + "<br>");
+
+      let yyyy = myDate.getFullYear();
+      let m = myDate.getMonth();
+      let dd = myDate.getDate();
+      let day = myDate.getDay();
+
+      let hr = myDate.getHours();
+      let mi = myDate.getMinutes();
+      let ss = myDate.getSeconds();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      function printTime() {
+        let days = ["일", "월", "화", "수", "목", "금", "토"];
+        let myDate = new Date();
+
+        let yy = myDate.getFullYear();
+        let mm = myDate.getMonth();
+        let dd = myDate.getDate();
+        let i = myDate.getDay();
+        let day = days[i];
+        let hr = myDate.getHours();
+        let mi = myDate.getMinutes();
+        let ss = myDate.getSeconds();
+
+        let result =
+          yy +
+          "-" +
+          mm +
+          "-" +
+          dd +
+          " " +
+          day +
+          " " +
+          hr +
+          "시 " +
+          mi +
+          "분 " +
+          ss +
+          "초";
+
+        document.getElementById("timer").innerHTML = result;
+
+        // return result;
+      }
+      function startTimer() {
+        setInterval(printTime, 1000);
+      }
+      // rgstartTimer();
+    </script>
+  </head>
+  <body onload="startTimer()">
+    <!-- <script>
+      document.write(printTime());
+    </script> -->
+
+    <span id="timer"></span>
+  </body>
+</html>

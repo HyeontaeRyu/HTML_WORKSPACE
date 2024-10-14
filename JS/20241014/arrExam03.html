@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document</title>
+    <script>
+      // let myarr = new Array(
+      //   new Array(101, 102, 103),
+      //   new Array(201, 202, 203, 204)
+      // );
+      let myarr2 = [
+        [101, 102, 103],
+        [201, 202, 203],
+      ];
+
+      let myarr1 = new Array();
+
+      for (let i = 0; i < 4; i += 1) {
+        for (let j = 0; j < 4; j += 1) {
+          myarr1[i][j] = (i + 1) * 100 + (j + 1);
+        }
+      }
+
+      document.write(myarr1.length);
+
+      for (let i = 0; i < myarr1.length; i++) {
+        for (let j = 0; j < myarr1[i].length; j++) {
+          document.write(
+            "<h1>" + "[" + i + "]" + "[" + j + "], " + myarr1[i][j] + "</h1>"
+          );
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

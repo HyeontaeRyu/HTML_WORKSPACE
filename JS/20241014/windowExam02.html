@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      function open1() {
+        window.open(
+          "windowExam01.html",
+          "window1",
+          "width=400, height=400, left=100, top=100"
+        );
+      }
+      function open2() {
+        window.open(
+          "windowExam01.html",
+          " ",
+          "width=400, height=400, left=100, top=100,status=no, scrollbars=no, toolbar=no, menubar=no, location=no"
+        );
+      }
+      function open3(url) {
+        window.open(
+          url,
+          "mywin",
+          "width=400, height=400, left=100, top=100,status=no, scrollbars=no, toolbar=no, menubar=no, location=no"
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>window</h1>
+    <div>
+      <a href="#" onclick="open1() return false;">새 창 열기</a>
+      <br />
+      <a href="#" onclick="open2() return false;">팝업 창 열기(1)</a>
+      <br />
+      <!-- 파라미터를 포함한 함수 호출 -->
+      <a href="#" onclick="open3('windowExam01.html') return false;"
+        >팝업 창 열기(2)</a
+      >
+      <br />
+      <a href="#" onclick="">팝업 창 열기(3)</a>
+      <br />
+    </div>
+  </body>
+</html>
