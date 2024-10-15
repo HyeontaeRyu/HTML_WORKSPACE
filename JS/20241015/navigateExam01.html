@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      let info = "<h1>웹 브라우저 정보 확인</h1>";
+      info += "<p>브라우저 이름: " + navigator.appName + "</p>";
+      info += "<p>브라우저 코드명: " + navigator.appCodeName + "</p>";
+      info += "<p>브라우저 버전: " + navigator.appVersion + "</p>";
+      info += "<p>브라우저 플랫폼: " + navigator.platform + "</p>";
+      info += "<p>브라우저 언어: " + navigator.language + "</p>";
+      info += "<p>브라우저 엔진: " + navigator.product + "</p>";
+      info += "<p>브라우저 온라인 상태: " + navigator.onLine + "</p>";
+      info += "<p>사용자 정보: " + navigator.userAgent + "</p>";
+      document.write(info);
+    </script>
+  </head>
+  <body></body>
+</html>

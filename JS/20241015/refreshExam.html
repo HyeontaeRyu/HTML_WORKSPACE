@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      //두 수 사이의 난수를 리턴하는 함수
+      function getRandomByRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      //5자리 인증번호를 id값이 'auth'인 요소에 출력하는 함수
+      function showAuthNo() {
+        var authNo = "";
+        for (var i = 0; i < 5; i++) {
+          authNo += getRandomByRange(0, 9);
+        }
+        document.getElementById("auth").innerHTML = authNo;
+      }
+      //새로고침
+      function refresh() {
+        location.reload();
+      }
+    </script>
+  </head>
+  <body onload="showAuthNo(); ">
+    <h1 id="auth"></h1>
+    <button onclick="refresh();">새로고침</button>
+  </body>
+</html>
