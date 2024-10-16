@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+      let bbs = {
+        "title": "JavaScript + Jquary 완벽 강의",
+        "discription":
+          "여기는 글로벌인 일본IT 개발자 과정에서 진행중인 JavaScript 강의 학생 용 자료 게시판 입니다.\n각 게시판의 다운로드 권한은 매 강의 개강 시 마다 부여 됩니다.",
+        "total": 4,
+        "item": [
+          {
+            "no": "공지",
+            "subject": "JavaScript + Jquary 완벽 강의 자료",
+            "hit": 16,
+            "date": "2024-10-16",
+          },
+          {
+            "no": "3",
+            "subject": "JavaScript + Jquary 완벽 강의 자료 3일차 자료 입니다.",
+            "hit": 85,
+            "date": "2024-10-16",
+          },
+          {
+            "no": "2",
+            "subject": "JavaScript + Jquary 완벽 강의 자료 2일차 자료 입니다.",
+            "hit": 50,
+            "date": "2024-10-14",
+          },
+          {
+            "no": "1",
+            "subject": "JavaScript + Jquary 완벽 강의 자료 1일차 자료 입니다.",
+            "hit": 12,
+            "date": "2024-10-11",
+          },
+        ],
+      };
+
+      // bbs 안에 각 독립된 값들에 대한 출력 HTML 생성.
+      function print() {
+        let html = "<h1>" + bbs.title + "</h1>";
+        html += "<p>" + bbs.discription + "</p>";
+        html += "<p>총 게시물 수 : " + bbs.total + "</p>";
+        html += "<ul>";
+        for (let i = 0; i < bbs.item.length; i++) {
+          html +=
+            "<li>" +
+            bbs.item[i].no +
+            " : " +
+            bbs.item[i].subject +
+            " (" +
+            bbs.item[i].hit +
+            " / " +
+            bbs.item[i].date +
+            ")" +
+            "</li>";
+        }
+        html += "</ul>";
+
+        document.write(html);
+      }
+    </script>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+  </head>
+  <body onload="print()"></body>
+</html>

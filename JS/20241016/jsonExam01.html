@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      /* 
+        JSON = JavaScript Object Notation
+        - JSON은 경량 데이터 교환 형식.
+        - JSON 데이터를 만들 때 빈 객체 안에 배열과 같이 key-value 형태로 데이터를 넣어준다.
+
+      */
+
+      // JSON 데이터
+      let hong = {
+        name: "홍길동",
+        age: 20,
+        gender: "남자",
+        visual: {
+          height: 180,
+          weight: 70,
+        },
+      };
+
+      document.write("<h1>" + hong.name + "</h1>");
+      document.write("<h2>" + keys + "</h2>");
+    </script>
+  </head>
+  <body></body>
+</html>

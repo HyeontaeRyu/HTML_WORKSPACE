@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      let sayHello = {
+        "name": "JavaScript",
+        "Eng": function () {
+          let console = document.getElementById("console");
+          console.innerText = "Hello," + this.name + "!";
+          console.style.color = "blue";
+        },
+        "Kor": function () {
+          let console = document.getElementById("console");
+          console.innerText = "안녕," + this.name + "!";
+          console.style.color = "red";
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <h1>JSON을 활용해 그룹화된 함수 호출</h1>
+    <input type="button" value="sayEng" onclick="sayHello.Eng()" />
+    <input type="button" value="sayKor" onclick="sayHello.Kor()" />
+    <h1 id="console"></h1>
+  </body>
+</html>
