@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("#sl > input:eq(0)").click(function () {
+          $("#sl > div").slideDown(500);
+        });
+        $("#sl > input:eq(1)").click(function () {
+          $("#sl > div").slideUp(500);
+        });
+        $("#sl > input:eq(2)").click(function () {
+          $("#sl > div").slideToggle(500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="sl">
+      <input type="button" value="보이기" name="" />
+      <input type="button" value="숨기기" name="" />
+      <input type="button" value="토글" name="" />
+      <div>
+        <img src="/IMG/benkyounira.jpg" width="300px" height="200px" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
