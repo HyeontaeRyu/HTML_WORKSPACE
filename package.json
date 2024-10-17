@@ -10,6 +10,8 @@
   "license": "ISC",
   "prettier": {
     "singleQuote": false,
-    "quoteProps": "preserve"
+    "quoteProps": "preserve",
+    "printWidth": 120
   }
+  
 }

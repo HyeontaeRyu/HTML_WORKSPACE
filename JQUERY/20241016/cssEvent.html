@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <style>
+      .box1 {
+        margin: 10px auto;
+        border: 5px solid #ccc;
+        padding: 30px;
+        text-align: center;
+      }
+      .box2 {
+        margin: 10px auto;
+        border: 10px solid #ff00ff;
+        padding: 25px;
+        text-align: left;
+        background: #ff0;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#id1").click(function () {
+          $("#box").css("color", "red");
+        });
+        $("#id2").click(function () {
+          $("#box").css("color", "green");
+        });
+        $("#id3").click(function () {
+          $("#box").css("color", "blue");
+        });
+
+        $("#id4").click(function () {
+          $("#box").css("background", "red");
+        });
+        $("#id5").click(function () {
+          $("#box").css("background", "green");
+        });
+        $("#id6").click(function () {
+          $("#box").css("background", "blue");
+        });
+
+        $("#id7").click(function () {
+          $("#box").css("width", "50%");
+        });
+        $("#id8").click(function () {
+          $("#box").css("width", "auto");
+        });
+
+        $("#id9").click(function () {
+          $("#box").removeClass("box2");
+          $("#box").addClass("box1");
+        });
+        $("#id10").click(function () {
+          $("#box").removeClass("box1");
+          $("#box").addClass("box2");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>css제어</h1>
+    <div id="box" class="box1"><h1 id="result">텍스트 영역</h1></div>
+    <input type="button" value="(폰트) red" id="id1" />
+    <input type="button" value="(폰트) green" id="id2" />
+    <input type="button" value="(폰트) blue" id="id3" /> <br />
+    <input type="button" value="(배경) red" id="id4" />
+    <input type="button" value="(배경) green" id="id5" />
+    <input type="button" value="(배경) blue" id="id6" /><br />
+    <input type="button" value="width = 50%" id="id7" />
+    <input type="button" value="width = auto" id="id8" />
+    <input type="button" value="box1 클래스 적용" id="id9" />
+    <input type="button" value="box2 클래스 적용" id="id10" />
+  </body>
+</html>

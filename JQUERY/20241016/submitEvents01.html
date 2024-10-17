@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="/event.css" />
+    <script>
+      $(function () {
+        $("input[type=reset]").click(function () {
+          if (confirm("리셋하시겠습니까?")) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        $("form[name=form1]").submit(function () {
+          if (confirm("저장하시겠습니까?")) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form action="form_ok.html" name="form1">
+      <div id="input">
+        <h3>당신의 이름은 무엇입니까.</h3>
+        <input type="text" name="userName" id="" />
+        <input type="submit" value="저장" class="myButton" />
+        <input type="reset" value="리셋" class="myButton" />
+      </div>
+    </form>
+  </body>
+</html>

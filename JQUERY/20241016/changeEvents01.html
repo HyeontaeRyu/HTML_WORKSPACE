@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="/event.css" />
+    <script>
+        $(function () {
+            $("input[name=user_name]").change(function (e) { 
+                $("#result").text("이름 값이 변경됨.");
+                
+            });
+            $("input[name=hobby]").change(function (e) { 
+                $("#result").text("취미 값이 변경됨.");
+                
+            });
+            $("input[name=gender]").change(function (e) { 
+                $("#result").text("성별 값이 변경됨.");                
+            });
+            $("select[name=job]").change(function (e) { 
+                $("#result").text("직업 값이 변경됨.");
+                
+            });
+        })
+        jq
+    </script>
+  </head>
+  <body>
+    <h1>changeEvent</h1>
+    <div id="input">
+
+        <legend>회원가입</legend>
+        <h3 for="name">이름</h3>
+        <input type="text" id="user_name" name="user_name" />
+        <h3 >성별</h3>
+        <input type="radio" name="gender" value="M" id="" />남자</input>
+        <input type="radio" name="gender" value="F" id="" />여자</input>
+        <input type="radio" name="gender" value="O" id="" />기타</input>
+        
+        <h3 >직업</label>
+        <select name="job" id="">
+        <option value="">직업을 선택하세요</option>
+        <option value="IT엔지니어">IT엔지니어</option>
+        <option value="교사">교사</option>
+        <option value="의사">의사</option>
+        <option value="변호사">변호사</option>
+        <option value="세무사">세무사</option>
+        <option value="CEO">CEO</option>
+        </select>
+        <h3 >취미</h3>
+        <label for="">
+            <input type="checkbox" name="hobby" name="축구" id="">축구</input>
+            <input type="checkbox" name="hobby" name="농구" id="">농구</input>
+            <input type="checkbox" name="hobby" name="야구" id="">야구</input>
+        </label>
+    </div>
+
+    <h2>결과</h2>
+    <div id="result"></div>
+  </body>
+</html>

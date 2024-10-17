@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="/event.css" />
+    <script>
+      $(function () {
+        $("#input > input[type=text]").focus(function () {
+          $("#result").text("focus 이벤트 발생");
+        });
+        $("#input > input[type=text]").blur(function () {
+          $("#result").text("blur 이벤트 발생");
+        });
+
+        // 페이지가 열리면서 자동으로 포커스가 설정되는 함수
+        $("#input > input[type=text]").focus();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>mouse event</h1>
+    <div id="input">
+      <input type="text" name="" id="" />
+    </div>
+    <h2>결과</h2>
+    <div id="result"></div>
+  </body>
+</html>

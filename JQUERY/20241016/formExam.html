@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="/event.css" />
+    <style>
+      /* body {
+        font-family: consolas, sans-serif;
+      } */
+    </style>
+    <script>
+      $(function () {
+        //id속성이 join인 태그 안에 submit 버튼을 누른 경우
+        $("#join").submit(function () {
+          //아이디 입력 검사
+          if (!$("input[name=user_id]").val()) {
+            alert("아이디를 입력해주세요.");
+            $("input[name=user_id]").focus();
+            return false;
+          }
+
+          // 비밀번호 입력 검사
+          if (!$("input[name=user_pw]").val()) {
+            alert("비밀번호를 입력해주세요.");
+            $("input[name=user_pw]").focus();
+            return false;
+          }
+
+          // 주민번호 입력 검사
+          if (!$("input[name=joomin_no]").val()) {
+            alert("주민번호를 입력해주세요.");
+            $("input[name=joomin_no]").focus();
+            return false;
+          }
+
+          // 성별 입력 검사
+          if (!$("input[name=gender]").is(":checked")) {
+            alert("성별을 선택해주세요.");
+            $("input[name=gender]").focus();
+            return false;
+          }
+
+          //이메일 입력 검사
+          if (!$("input[name=user_email]").val()) {
+            alert("이메일을 입력해주세요.");
+            $("input[name=user_email]").focus();
+            return false;
+          }
+
+          //URL 입력 검사
+          if (!$("input[name=user_url]").val()) {
+            alert("URL을 입력해주세요.");
+            $("input[name=user_url]").focus();
+            return false;
+          }
+
+          //핸드폰 번호 입력 검사
+          if (!$("input[name=user_hp]").val()) {
+            alert("핸드폰 번호를 입력해주세요.");
+            $("input[name=user_hp]").focus();
+            return false;
+          }
+
+          //취미 입력 검사
+          if (!$("input[name=user_hobby]").is(":checked")) {
+            alert("취미를 선택해주세요.");
+            $("input[name=user_hobby]").focus();
+            return false;
+          }
+
+          //직업 입력 검사
+          if ($("#user_job").val() == "none") {
+            alert("직업을 선택해주세요.");
+            $("#user_job").focus();
+            return false;
+          }
+
+          // 출력 내용 Object로 생성
+          let resultobj = new Object();
+          resultobj.user_id = $("input[name=user_id]").val();
+          resultobj.user_pw = $("input[name=user_pw]").val();
+          resultobj.joomin_no = $("input[name=joomin_no]").val();
+          resultobj.gender = $("input[name=gender]:checked").val();
+          resultobj.user_email = $("input[name=user_email]").val();
+          resultobj.user_url = $("input[name=user_url]").val();
+          resultobj.user_hp = $("input[name=user_hp]").val();
+          resultobj.user_hobby = [];
+          $("input[name=user_hobby]:checked").each(function () {
+            resultobj.user_hobby.push($(this).val());
+          });
+          resultobj.user_job = $("#user_job").val();
+
+          //출력 할 문자열 생성
+          let result = "<ul>";
+          result += "<li>아이디 : " + resultobj.user_id + "</li>";
+          result += "<li>비밀번호 : " + resultobj.user_pw + "</li>";
+          result += "<li>주민번호 : " + resultobj.joomin_no + "</li>";
+          result += "<li>성별 : " + resultobj.gender + "</li>";
+          result += "<li>이메일 : " + resultobj.user_email + "</li>";
+          result += "<li>URL : " + resultobj.user_url + "</li>";
+          result += "<li>핸드폰 번호 : " + resultobj.user_hp + "</li>";
+          result += "<li>취미 : " + resultobj.user_hobby + "</li>";
+          result += "<li>직업 : " + resultobj.user_job + "</li>";
+          result += "</ul>";
+
+          //JSON 형식으로 변환
+          let resultstr = JSON.stringify(resultobj);
+
+          //화면에 출력
+          $("body").html(result);
+          $("body").append(resultstr);
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form name="form1" id="join" action="">
+      <div id="input">
+        <h3>아이디</h3>
+        <input type="text" name="user_id" id="" />
+        <h3>비밀번호</h3>
+        <input type="password" name="user_pw" id="" />
+        <h3>주민번호</h3>
+        <input type="password" name="joomin_no" id="" />
+        <h3>성별</h3>
+        <label>
+          <label><input type="radio" name="gender" value="남자" />남자</label>
+          <label><input type="radio" name="gender" value="여자" />여자</label>
+          <label><input type="radio" name="gender" value="기타" />기타</label>
+        </label>
+        <h3>이메일</h3>
+        <input type="email" name="user_email" id="" />
+        <h3>URL</h3>
+        <input type="url" name="user_url" id="" n />
+        <h3>핸드폰 번호</h3>
+        <input type="tel" name="user_hp" id="" />
+        <h3>취미</h3>
+        <label>
+          <label><input type="checkbox" name="user_hobby" value="축구" />축구</label>
+          <label><input type="checkbox" name="user_hobby" value="야구" />야구</label>
+          <label><input type="checkbox" name="user_hobby" value="농구" />농구</label>
+        </label>
+        <h3>직업</h3>
+        <select name="job" id="user_job">
+          <option value="none">-------- 직업선택 --------</option>
+          <option value="프로그래머">프로그래머</option>
+          <option value="퍼블리셔">퍼블리셔</option>
+          <option value="디자이너">디자이너</option>
+          <option value="웹 기획">웹 기획</option>
+        </select>
+        <br />
+        <br />
+        <input type="submit" value="회원가입" class="myButton" />
+        <input type="reset" value="다시작성" class="myButton" />
+      </div>
+    </form>
+  </body>
+</html>

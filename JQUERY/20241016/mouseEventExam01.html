@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="/event.css" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: consolas, sans-serif;
+      }
+    </style>
+    <script>
+      $(function () {
+        /* // 마우스 버튼 누를 때 이벤트
+        $("#input").mousedown(function () {
+          $("#result").text("mousedown 이벤트 발생");
+        });
+        // 마우스 버튼 뗄 때 이벤트
+        $("#input").mouseup(function () {
+          $("#result").text("mouseup 이벤트 발생");
+        });
+        // 마우스 올라갔을때
+        $("#input").mouseenter(function () {
+          $("#result").text("mouseenter 이벤트 발생");
+        });
+        // 마우스 내려갔을때
+        $("#input").mouseleave(function () {
+          $("#result").text("mouseleave 이벤트 발생");
+        }); */
+
+        // 마우스 클릭 이벤트
+        $("#input").click(function () {
+          $("#result").text("click 이벤트 발생");
+        });
+        // 마우스 더블클릭 이벤트
+        $("#input").dblclick(function () {
+          $("#result").text("dblclick 이벤트 발생");
+        });
+        // 마우스 호버 이벤트
+        $("#input").hover(
+          function () {
+            $("#result").text("hover 이벤트 발생");
+          },
+          function () {
+            $("#result").text("hover 이벤트 끝");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <h1>mouse event</h1>
+    <div id="input">여기를 클릭하세요</div>
+    <h2>결과</h2>
+    <div id="result"></div>
+  </body>
+</html>
