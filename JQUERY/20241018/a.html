@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Document</title>
     <script src="/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="a.css" />
     <script>
       $(function () {
         let collapsibleCount = $(".collapsible").length;
@@ -11,15 +12,6 @@
         for (let i = 0; i < collapsibleCount; i++) {
           $(".collapsible:eq(" + i + ") > .content").load($(".collapsible:eq(" + i + ") .title a").attr("href"));
         }
-        /* 
-        for (let i = 0; i < collapsibleCount; i++) {
-          $(".collapsible:eq(" + i + ") > a").addClass("selected");
-          $(".collapsible")
-            .not(":eq(" + i + ")")
-            .find(".content")
-            .hide();
-        } 
-        */
 
         $(".collapsible:eq(0) > a").addClass("selected");
         $(".collapsible").not(":eq(0)").find(".content").hide();
@@ -27,49 +19,36 @@
         // $(".collapsible:eq(0) > .content").load($(".collapsible:eq(0) .title a").attr("href"));
         // $(".collapsible:eq(1) > .content").load($(".collapsible:eq(1) .title a").attr("href"));
         // $(".collapsible:eq(2) > .content").load($(".collapsible:eq(2) .title a").attr("href"));
+
+        // 링크에 대한 클릭 이벤트 처리
+        $(".collapsible .title a").click(function () {
+          $(this).toggleClass("selected");
+          $(".collapsible .title a").not(this).removeClass("selected");
+
+          // 펼칠 대상 검색
+          let target = $(this).parents(".collapsible").find(".content");
+
+          // 나머지 대상
+          let other = $(".collapsible .title a").not(this).parents(".collapsible").find(".content");
+
+          // 애니메이션 적용
+          target.slideToggle(300);
+
+          // 나머지 닫기
+          //   other.slideUp(300);
+
+          // 현재 클릭된 항목에 대한 내용이 열려진 상태라면 내용을 load() 함수로 불러와서 출력
+          /* 
+          if (target.css("display") != "none") {
+            target.load($(this).attr("href"));
+          }
+          */
+
+          // 링크 작동 중지
+          return false;
+        });
       });
     </script>
-    <style>
-      body {
-        background: black;
-      }
-
-      ul {
-        padding: 0;
-        margin: 50px auto;
-        list-style: none;
-        width: 800px;
-      }
-
-      .title {
-        padding: 0;
-        margin: 0;
-      }
-
-      .title > a {
-        display: block;
-        padding-top: 12px;
-        font-size: 14px;
-        text-indent: 12px;
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
-        height: 23px;
-        background: url("/IMG/background.jpg");
-      }
-
-      .selected {
-        background: url("/img/background-selected.jpg");
-      }
-
-      .content {
-        margin: 0;
-        background: #d4d0c8;
-        padding: 10px;
-        height: 200px;
-        overflow-y: auto;
-      }
-    </style>
   </head>
   <body>
     <h1>accordion</h1>
