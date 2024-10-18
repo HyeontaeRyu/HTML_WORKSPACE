@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        let collapsibleCount = $(".collapsible").length;
+
+        for (let i = 0; i < collapsibleCount; i++) {
+          $(".collapsible:eq(" + i + ") > .content").load($(".collapsible:eq(" + i + ") .title a").attr("href"));
+        }
+        /* 
+        for (let i = 0; i < collapsibleCount; i++) {
+          $(".collapsible:eq(" + i + ") > a").addClass("selected");
+          $(".collapsible")
+            .not(":eq(" + i + ")")
+            .find(".content")
+            .hide();
+        } 
+        */
+
+        $(".collapsible:eq(0) > a").addClass("selected");
+        $(".collapsible").not(":eq(0)").find(".content").hide();
+
+        // $(".collapsible:eq(0) > .content").load($(".collapsible:eq(0) .title a").attr("href"));
+        // $(".collapsible:eq(1) > .content").load($(".collapsible:eq(1) .title a").attr("href"));
+        // $(".collapsible:eq(2) > .content").load($(".collapsible:eq(2) .title a").attr("href"));
+      });
+    </script>
+    <style>
+      body {
+        background: black;
+      }
+
+      ul {
+        padding: 0;
+        margin: 50px auto;
+        list-style: none;
+        width: 800px;
+      }
+
+      .title {
+        padding: 0;
+        margin: 0;
+      }
+
+      .title > a {
+        display: block;
+        padding-top: 12px;
+        font-size: 14px;
+        text-indent: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        height: 23px;
+        background: url("/IMG/background.jpg");
+      }
+
+      .selected {
+        background: url("/img/background-selected.jpg");
+      }
+
+      .content {
+        margin: 0;
+        background: #d4d0c8;
+        padding: 10px;
+        height: 200px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>accordion</h1>
+    <ul>
+      <li class="collapsible">
+        <h2 class="title"><a href="./txt/HTML5.txt">HTML5</a></h2>
+        <p class="content"></p>
+      </li>
+      <li class="collapsible">
+        <h2 class="title"><a href="./txt/JQuery.txt">JQuery</a></h2>
+        <p class="content"></p>
+      </li>
+      <li class="collapsible">
+        <h2 class="title"><a href="./txt/Bootstrap.txt">Bootstrap</a></h2>
+        <p class="content"></p>
+      </li>
+    </ul>
+  </body>
+</html>
