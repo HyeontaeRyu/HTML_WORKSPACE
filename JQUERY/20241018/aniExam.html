@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("button")
+          .eq(0)
+          .click(function () {
+            $("#animation-area").html("<div id='box'></div>");
+          });
+        //좌측으로 250px 이동
+        $("button:eq(1)").click(function () {
+          $("#box").animate({ left: "250px" }, 1000, "swing", function () {
+            alert("완료");
+          });
+        });
+        $("button:eq(2)").click(function () {
+          $("#box").animate({ left: "250px", height: "150px", width: "150px" }, 1000, "swing", function () {
+            alert("완료");
+          });
+        });
+        $("button:eq(3)").click(function () {
+          $("#box").animate({ left: "+=50px", height: "+=50px", width: "+=50px" }, 1000, "swing", function () {
+            alert("완료");
+          });
+        });
+        $("button:eq(4)").click(function () {
+          $("#box").animate({ height: "300px" }, 1000);
+          $("#box").animate({ width: "300px" }, 1000);
+          $("#box").animate({ height: "100px" }, 1000);
+          $("#box").animate({ width: "100px" }, 1000, function () {
+            alert("완료");
+          });
+        });
+      });
+    </script>
+    <style>
+      #box {
+        background-color: #58bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>animate</h1>
+    <button type="reset">reset</button>
+    <button>ani1</button>
+    <button>ani2</button>
+    <button>ani3</button>
+    <button>ani4</button>
+    <div id="animation-area">
+      <div id="box"></div>
+    </div>
+  </body>
+</html>
